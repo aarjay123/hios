@@ -1,0 +1,273 @@
+html {
+	/*background-color: #FCFCFF;*/
+	background-color: black;
+	font-family: 'Outfit', sans-serif;
+	color: white;
+}
+
+.navButton {
+	height:60px;
+    	width:200px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 20px;
+	background-color: #26abff;
+	color: white;
+	border-radius: 16px;
+	border: none;
+}
+	
+.navButtonInactive {
+	height:60px;
+	width:200px;
+	font-family: 'Outfit', sans-serif;
+	font-size: 20px;
+	background-color: #bfe6ff;
+	color: grey;
+	border-radius: 16px;
+	border: none;
+}
+
+.offerBox {
+	border-radius: 25px;
+	background: #006ee6;
+	padding: 10px;
+	width: 350px;
+}
+
+.bannerBox {
+	border-radius: 25px;
+	/*background: #3d8c40;*/
+  background: orange;
+	padding: 10px;
+	width: 350px;
+}
+
+.offerBoxExpired {
+	border-radius: 25px;
+	background: red;
+	padding: 10px;
+	width: 350px;
+}
+
+.offerHeadings {
+	font-size: 35px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.offerBody {
+	font-size: 20px;
+}
+
+.offerExpiry {
+	font-size: 10px;
+	font-style: italic;
+}
+
+.offerDate {
+	font-size: 14px;
+	text-align: left;
+}
+
+.termsconditions {
+	background-color: #FCFCFF;
+	color: black;
+	font-family: 'Courier Prime', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: black;
+    color: #FCFCFF;
+  }
+}
+
+#infoText {
+	font-family: 'Courier Prime', monospace;
+}
+
+#homeheading {
+	font-size: 40px;
+	animation: pulse 15s infinite;
+}
+
+#p11 {
+	font-size: 40px;
+	color: #0F9D58;
+}
+
+#p12 {
+	font-size: 40px;
+	color: #4285F4;
+}
+
+#para {
+	font-size: 20px;
+}
+
+#paraheadings {
+	font-size: 40px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+#smallpara {
+	font-size: 10px;
+}
+
+#rightalign {
+	text-align: right;
+}
+
+.wrapper {
+	display: grid;
+ 	grid-template-columns: 400px 400px;
+	justify-content: center;
+}
+
+#rickroll {
+	font-size: 40px;
+	text-decoration: underline;
+	animation: pulse 15s infinite;
+}
+
+@keyframes pulse {
+  0% {
+	/*color: #FF4F4B;*/
+	color: #FF0000;
+  } /* Red */
+  
+  25% {
+	/*color: #a0d2eb;*/
+	color: #0000FF;
+  } /* Blue */
+  
+  50% {
+	/*color: #90EE90;*/
+	color: #228B22
+  } /* Green */
+  
+  75% {
+	/*color: #808080;*/
+	color: #FFFFFF;
+  } /* White */
+  
+  100% {
+	/*color: #494d5f;*/
+	color: orange;
+  } /* Black */
+}
+
+.wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+  background: linear-gradient(375deg, #1cc7d0, #2ede98); 
+  clip-path: circle(25px at calc(0% + 45px) 45px); 
+  /*clip-path: circle(25px at calc(100% - 45px) 45px);*/
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  left: 20px; 
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
+  background: linear-gradient(375deg, #1cc7d0, #2ede98); 
+  transition: all 0.3s ease-in-out;
+}
+
+#active:checked ~ .menu-btn{
+  background: #fff;
+  color: #4158d0;
+}
+
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.wrapper ul li{
+  margin: 15px 0;
+}
+
+.wrapper ul li a{
+  color: none;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 3px 5px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+
+.wrapper ul li a:hover{
+  color: #4158d0;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: left;
+  width: 100%;
+  color: #202020;
+}
+
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
